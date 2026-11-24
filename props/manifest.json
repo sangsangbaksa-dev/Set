@@ -1,0 +1,256 @@
+{
+  "props": [
+    {
+      "id": "prop_crate_wood",
+      "category": "cover",
+      "tag": "cover_high",
+      "description": "나무 상자 1.2m — 하이 커버, 파괴 가능",
+      "asset": "props/prop_crate_wood.glb"
+    },
+    {
+      "id": "prop_crate_stack",
+      "category": "cover",
+      "tag": "cover_high",
+      "description": "상자 더미 — 하이 커버, 올라설 수 있음",
+      "asset": "props/prop_crate_stack.glb"
+    },
+    {
+      "id": "prop_barrel_explosive",
+      "category": "cover",
+      "tag": "explosive",
+      "description": "빨간 드럼통 — 사격 시 폭발",
+      "asset": "props/prop_barrel_explosive.glb"
+    },
+    {
+      "id": "prop_barrel_oil",
+      "category": "cover",
+      "tag": "cover_low",
+      "description": "파란 드럼통 — 로우 커버, 관통됨",
+      "asset": "props/prop_barrel_oil.glb"
+    },
+    {
+      "id": "prop_concrete_barrier",
+      "category": "cover",
+      "tag": "cover_low",
+      "description": "저지형 콘크리트 방호벽 2m — 로우 커버, 관통 불가",
+      "asset": "props/prop_concrete_barrier.glb"
+    },
+    {
+      "id": "prop_sandbag_wall",
+      "category": "cover",
+      "tag": "cover_low",
+      "description": "모래주머니 호형 벽 — 로우 커버",
+      "asset": "props/prop_sandbag_wall.glb"
+    },
+    {
+      "id": "prop_dumpster",
+      "category": "cover",
+      "tag": "cover_high",
+      "description": "대형 쓰레기통 — 하이 커버, 밀 수 있음",
+      "asset": "props/prop_dumpster.glb"
+    },
+    {
+      "id": "prop_shipping_container",
+      "category": "cover",
+      "tag": "cover_full",
+      "description": "20피트 선적 컨테이너 — 벽, 문 열림",
+      "asset": "props/prop_shipping_container.glb"
+    },
+    {
+      "id": "prop_pallet_stack",
+      "category": "cover",
+      "tag": "cover_high",
+      "description": "랩 감은 팔레트 화물 — 하이 커버",
+      "asset": "props/prop_pallet_stack.glb"
+    },
+    {
+      "id": "prop_gas_cylinder_cage",
+      "category": "cover",
+      "tag": "explosive",
+      "description": "가스통 보관함 — 연쇄 폭발",
+      "asset": "props/prop_gas_cylinder_cage.glb"
+    },
+    {
+      "id": "prop_cable_spool",
+      "category": "cover",
+      "tag": "cover_high",
+      "description": "케이블 드럼 — 하이 커버, 굴릴 수 있음",
+      "asset": "props/prop_cable_spool.glb"
+    },
+    {
+      "id": "prop_scaffold_section",
+      "category": "cover",
+      "tag": "vantage",
+      "description": "비계 한 칸 — 고지대 포지션",
+      "asset": "props/prop_scaffold_section.glb"
+    },
+    {
+      "id": "prop_ammo_box",
+      "category": "pickup",
+      "tag": "pickup_ammo",
+      "description": "탄약 상자 — 탄약 보급",
+      "asset": "props/prop_ammo_box.glb"
+    },
+    {
+      "id": "prop_medkit",
+      "category": "pickup",
+      "tag": "pickup_health",
+      "description": "구급 상자 — 체력 회복",
+      "asset": "props/prop_medkit.glb"
+    },
+    {
+      "id": "prop_armor_vest",
+      "category": "pickup",
+      "tag": "pickup_armor",
+      "description": "방탄 조끼 — 방어구 충전",
+      "asset": "props/prop_armor_vest.glb"
+    },
+    {
+      "id": "prop_cash_bag",
+      "category": "loot",
+      "tag": "loot_carry",
+      "description": "현금 가방 — 습격 전리품, 들고 뛰면 느려짐",
+      "asset": "props/prop_cash_bag.glb"
+    },
+    {
+      "id": "prop_cash_stack",
+      "category": "loot",
+      "tag": "loot_small",
+      "description": "현금 다발 — 즉시 획득",
+      "asset": "props/prop_cash_stack.glb"
+    },
+    {
+      "id": "prop_bond_case",
+      "category": "loot",
+      "tag": "loot_carry",
+      "description": "채권 서류가방 — 고가 전리품",
+      "asset": "props/prop_bond_case.glb"
+    },
+    {
+      "id": "prop_weapon_crate",
+      "category": "loot",
+      "tag": "supply_drop",
+      "description": "무기 보급 상자 — 공중 보급/이벤트",
+      "asset": "props/prop_weapon_crate.glb"
+    },
+    {
+      "id": "prop_atm",
+      "category": "economy",
+      "tag": "atm",
+      "description": "ATM — 입출금, 해킹 대상",
+      "asset": "props/prop_atm.glb"
+    },
+    {
+      "id": "prop_vending_machine",
+      "category": "economy",
+      "tag": "shop_small",
+      "description": "자판기 — 소모품 구매",
+      "asset": "props/prop_vending_machine.glb"
+    },
+    {
+      "id": "prop_cash_register",
+      "category": "economy",
+      "tag": "register",
+      "description": "계산대 — 상점 강도 대상",
+      "asset": "props/prop_cash_register.glb"
+    },
+    {
+      "id": "prop_safe",
+      "category": "economy",
+      "tag": "safe",
+      "description": "금고 — 습격 목표, 드릴/다이얼",
+      "asset": "props/prop_safe.glb"
+    },
+    {
+      "id": "prop_workbench",
+      "category": "economy",
+      "tag": "workbench",
+      "description": "작업대 — 무기 개조",
+      "asset": "props/prop_workbench.glb"
+    },
+    {
+      "id": "prop_laptop_hack",
+      "category": "economy",
+      "tag": "hack_terminal",
+      "description": "해킹 노트북 — 습격 준비 미션",
+      "asset": "props/prop_laptop_hack.glb"
+    },
+    {
+      "id": "prop_traffic_cone",
+      "category": "street",
+      "tag": "decor_physics",
+      "description": "라바콘 — 물리 소품",
+      "asset": "props/prop_traffic_cone.glb"
+    },
+    {
+      "id": "prop_street_lamp",
+      "category": "street",
+      "tag": "decor_light",
+      "description": "가로등 5.6m — 조명",
+      "asset": "props/prop_street_lamp.glb"
+    },
+    {
+      "id": "prop_fire_hydrant",
+      "category": "street",
+      "tag": "decor_breakable",
+      "description": "소화전 — 차로 치면 물 분출",
+      "asset": "props/prop_fire_hydrant.glb"
+    },
+    {
+      "id": "prop_bench",
+      "category": "street",
+      "tag": "decor_sit",
+      "description": "공원 벤치 — 앉기",
+      "asset": "props/prop_bench.glb"
+    },
+    {
+      "id": "prop_trash_bin",
+      "category": "street",
+      "tag": "decor_physics",
+      "description": "가로 쓰레기통",
+      "asset": "props/prop_trash_bin.glb"
+    },
+    {
+      "id": "prop_bus_shelter",
+      "category": "street",
+      "tag": "cover_high",
+      "description": "버스 정류장 — 유리 파괴",
+      "asset": "props/prop_bus_shelter.glb"
+    },
+    {
+      "id": "prop_parking_meter",
+      "category": "street",
+      "tag": "decor_breakable",
+      "description": "주차 미터기 — 부수면 잔돈",
+      "asset": "props/prop_parking_meter.glb"
+    },
+    {
+      "id": "prop_newspaper_box",
+      "category": "street",
+      "tag": "cover_low",
+      "description": "신문 가판함 — 로우 커버",
+      "asset": "props/prop_newspaper_box.glb"
+    },
+    {
+      "id": "prop_dock_bollard",
+      "category": "port",
+      "tag": "cover_low",
+      "description": "부두 계류주 — 로우 커버",
+      "asset": "props/prop_dock_bollard.glb"
+    },
+    {
+      "id": "prop_life_ring_stand",
+      "category": "port",
+      "tag": "decor",
+      "description": "구명환 거치대",
+      "asset": "props/prop_life_ring_stand.glb"
+    },
+    {
+      "id": "prop_road_barricade",
+      "category": "street",
+      "tag": "decor_physics",
+      "description": "도로 바리케이드 — 경찰 검문",
+      "asset": "props/prop_road_barricade.glb"
+    }
+  ]
+}
