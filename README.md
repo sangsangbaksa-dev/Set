@@ -1,6 +1,6 @@
 # Set — 공용 3D 모델
 
-Project Harbor(sangsangbaksa-dev/GTA-)와 이후 합칠 게임이 같이 쓰는 소품 **46종**과 차량 **1종**. 소품은 전투 커버, 경제 상호작용, 항구 시설을 포함한다.
+Project Harbor(sangsangbaksa-dev/GTA-)와 이후 합칠 게임이 같이 쓰는 소품 **46종**, 차량 **1종**, 인물 **4종**. 소품은 전투 커버, 경제 상호작용, 항구 시설을 포함한다.
 
 ![cover](previews/cover.png)
 ![large](previews/large.png)
@@ -70,6 +70,23 @@ Harbor 리포에서 차량을 재생성한다.
 
 ```bash
 blender -b --factory-startup -P tools/blender/build_vehicles.py -- --out ../set/vehicles
+```
+
+## Harbor Front 인물
+
+![Harbor Front 인물 얼굴과 전신](previews/harbor_people.png)
+
+| 모델 | 역할과 디자인 |
+|---|---|
+| `characters/chr_harbor_rook.glb` | 룩. 바랜 청록 작업 재킷과 캔버스 슬링을 멘 배달원 |
+| `characters/chr_harbor_officer.glb` | 마라 베일. 남색 근무복, 모자와 방파제 배지를 착용한 항만 경찰 |
+| `characters/chr_harbor_crew.glb` | 니코 보스. 넓은 체형, 짧은 머리와 턱수염, 적갈색 조끼를 입은 라이벌 크루 |
+| `characters/chr_harbor_dockhand.glb` | 아마라 콜. 작업복, 반사 조끼와 헤드램프를 착용한 항만 전기 기술자 |
+
+각 GLB는 하나의 스킨드 메시와 공용 51본 골격을 포함한다. 원점은 발밑이고 앞쪽은 glTF +Z다. [Harbor 생성 스크립트](https://github.com/sangsangbaksa-dev/GTA-/blob/main/tools/blender/harbor_people.py)
+
+```bash
+blender -b --factory-startup -P tools/blender/build_assets.py -- --out ../set --only harbor_people
 ```
 
 ## 규칙
