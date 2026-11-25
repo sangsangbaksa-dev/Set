@@ -1,6 +1,6 @@
 # Set — 공용 소품(props)
 
-Project Harbor(sangsangbaksa-dev/GTA-)와 이후 합칠 게임이 같이 쓰는 소품 모델 **36종**. 전투(커버)·경제(상호작용) 중심.
+Project Harbor(sangsangbaksa-dev/GTA-)와 이후 합칠 게임이 같이 쓰는 소품 모델 **42종**. 전투 커버, 경제 상호작용, 항구 시설을 포함한다.
 
 ![cover](previews/cover.png)
 ![large](previews/large.png)
@@ -45,14 +45,20 @@ Project Harbor(sangsangbaksa-dev/GTA-)와 이후 합칠 게임이 같이 쓰는 
 | `prop_dock_bollard` | 항구 | `cover_low` | 부두 계류주 — 로우 커버 |
 | `prop_life_ring_stand` | 항구 | `decor` | 구명환 거치대 |
 | `prop_road_barricade` | 거리 | `decor_physics` | 도로 바리케이드 — 경찰 검문 |
+| `prop_dock_power_pedestal` | 항구 | `decor` | 부두 전원함 |
+| `prop_dock_access_gate` | 항구 | `decor` | 부두 출입문 — 닫힌 고정형 |
+| `prop_dock_safety_rail` | 항구 | `decor` | 부두 안전 난간 |
+| `prop_mooring_fender` | 항구 | `cover_low` | 접안용 고무 방충재 |
+| `prop_loading_ramp` | 항구 | `decor` | 강철 하역 경사판 |
+| `prop_dock_cargo_net` | 항구 | `cover_low` | 그물로 고정한 팔레트 화물 |
 
-`props/manifest.json` = 위 표의 기계용 버전. 게임은 `tag`로 동작을 붙인다 (Harbor `data/props/` 참조).
+`props/manifest.json`에서 모델 경로와 게임플레이 태그를 확인할 수 있다. Harbor의 `data/props/props.json`과 같은 목록이다.
 
 ## 규칙
 - 생성: GTA- 리포 `tools/blender/build_props.py` (블렌더 4.2 헤드리스). **.glb를 손으로 고치지 말고** 스크립트 수정 후 재생성:
   `blender -b --factory-startup -P tools/blender/build_props.py -- --out ../set/props --manifest ../set/props/manifest.json`
 - 1단위 = 1m, 바닥 중심 원점, 정면 -Y(Blender) → glTF에선 +Z.
-- 충돌: 시각 메시와 별개인 단순 박스/원기둥 `*-colonly` 메시 → Godot이 정적 충돌체로 만들고 화면엔 안 그림.
+- 충돌: 시각 메시와 별개인 단순한 `*-colonly` 메시를 Godot이 정적 충돌체로 가져온다.
 - 빈 오브젝트(empty) 마커: `interact`(상호작용 지점), `loot_socket`, `light`, `sit`, `door_interact`.
 - LOD는 Godot 임포트가 자동 생성. 시각 메시는 6k 트라이 이하.
 - 오리지널 디자인만. 실존 브랜드·로고 금지.

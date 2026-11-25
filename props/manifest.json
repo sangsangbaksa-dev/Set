@@ -251,6 +251,48 @@
       "tag": "decor_physics",
       "description": "도로 바리케이드 — 경찰 검문",
       "asset": "props/prop_road_barricade.glb"
+    },
+    {
+      "id": "prop_dock_power_pedestal",
+      "category": "port",
+      "tag": "decor",
+      "description": "부두 전원함",
+      "asset": "props/prop_dock_power_pedestal.glb"
+    },
+    {
+      "id": "prop_dock_access_gate",
+      "category": "port",
+      "tag": "decor",
+      "description": "부두 출입문 — 닫힌 고정형",
+      "asset": "props/prop_dock_access_gate.glb"
+    },
+    {
+      "id": "prop_dock_safety_rail",
+      "category": "port",
+      "tag": "decor",
+      "description": "부두 안전 난간",
+      "asset": "props/prop_dock_safety_rail.glb"
+    },
+    {
+      "id": "prop_mooring_fender",
+      "category": "port",
+      "tag": "cover_low",
+      "description": "접안용 고무 방충재",
+      "asset": "props/prop_mooring_fender.glb"
+    },
+    {
+      "id": "prop_loading_ramp",
+      "category": "port",
+      "tag": "decor",
+      "description": "강철 하역 경사판",
+      "asset": "props/prop_loading_ramp.glb"
+    },
+    {
+      "id": "prop_dock_cargo_net",
+      "category": "port",
+      "tag": "cover_low",
+      "description": "그물로 고정한 팔레트 화물",
+      "asset": "props/prop_dock_cargo_net.glb"
     }
   ]
 }
