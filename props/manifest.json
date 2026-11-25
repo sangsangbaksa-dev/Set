@@ -293,6 +293,34 @@
       "tag": "cover_low",
       "description": "그물로 고정한 팔레트 화물",
       "asset": "props/prop_dock_cargo_net.glb"
+    },
+    {
+      "id": "prop_harbor_gantry_crane",
+      "category": "port",
+      "tag": "decor",
+      "description": "부두 갠트리 크레인 — 하부 통행 가능",
+      "asset": "props/prop_harbor_gantry_crane.glb"
+    },
+    {
+      "id": "prop_harbor_pilot_tug",
+      "category": "port",
+      "tag": "decor",
+      "description": "부두 작업선 — 원점은 수선, 선수는 Blender -Y / glTF +Z",
+      "asset": "props/prop_harbor_pilot_tug.glb"
+    },
+    {
+      "id": "prop_dock_inspection_terminal",
+      "category": "port",
+      "tag": "decor",
+      "description": "부두 점검 단말기 — 화면 및 점검 위치 마커 포함",
+      "asset": "props/prop_dock_inspection_terminal.glb"
+    },
+    {
+      "id": "prop_harbor_beacon",
+      "category": "port",
+      "tag": "decor",
+      "description": "항만 등대 — 프레넬 렌즈와 등화 마커 포함",
+      "asset": "props/prop_harbor_beacon.glb"
     }
   ]
 }

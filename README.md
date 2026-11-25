@@ -1,6 +1,6 @@
-# Set — 공용 소품(props)
+# Set — 공용 3D 모델
 
-Project Harbor(sangsangbaksa-dev/GTA-)와 이후 합칠 게임이 같이 쓰는 소품 모델 **42종**. 전투 커버, 경제 상호작용, 항구 시설을 포함한다.
+Project Harbor(sangsangbaksa-dev/GTA-)와 이후 합칠 게임이 같이 쓰는 소품 **46종**과 차량 **1종**. 소품은 전투 커버, 경제 상호작용, 항구 시설을 포함한다.
 
 ![cover](previews/cover.png)
 ![large](previews/large.png)
@@ -51,14 +51,32 @@ Project Harbor(sangsangbaksa-dev/GTA-)와 이후 합칠 게임이 같이 쓰는 
 | `prop_mooring_fender` | 항구 | `cover_low` | 접안용 고무 방충재 |
 | `prop_loading_ramp` | 항구 | `decor` | 강철 하역 경사판 |
 | `prop_dock_cargo_net` | 항구 | `cover_low` | 그물로 고정한 팔레트 화물 |
+| `prop_harbor_gantry_crane` | 항구 | `decor` | 부두 갠트리 크레인 — 하부 통행 가능 |
+| `prop_harbor_pilot_tug` | 항구 | `decor` | 부두 작업선 — 원점은 수선, 선수는 Blender -Y / glTF +Z |
+| `prop_dock_inspection_terminal` | 항구 | `decor` | 부두 점검 단말기 — 화면 및 점검 위치 마커 포함 |
+| `prop_harbor_beacon` | 항구 | `decor` | 항만 등대 — 프레넬 렌즈와 등화 마커 포함 |
 
 `props/manifest.json`에서 모델 경로와 게임플레이 태그를 확인할 수 있다. Harbor의 `data/props/props.json`과 같은 목록이다.
+
+## 차량
+
+| 파일 | 설명 |
+|---|---|
+| `vehicles/veh_calloway_compact.glb` | Calloway Pip 소형차. 차체와 네 바퀴 피벗을 포함한다. |
+
+차량 원점은 지면 중심이고 glTF에서 전방은 +Z, 위쪽은 +Y다. `WheelFL`과 `WheelFR`은 로컬 Y축으로 조향하고 각 바퀴의 `Roll` 자식 노드는 로컬 X축으로 구른다.
+
+Harbor 리포에서 차량을 재생성한다.
+
+```bash
+blender -b --factory-startup -P tools/blender/build_vehicles.py -- --out ../set/vehicles
+```
 
 ## 규칙
 - 생성: GTA- 리포 `tools/blender/build_props.py` (블렌더 4.2 헤드리스). **.glb를 손으로 고치지 말고** 스크립트 수정 후 재생성:
   `blender -b --factory-startup -P tools/blender/build_props.py -- --out ../set/props --manifest ../set/props/manifest.json`
-- 1단위 = 1m, 바닥 중심 원점, 정면 -Y(Blender) → glTF에선 +Z.
+- 1단위 = 1m, 바닥 중심 원점, 정면 -Y(Blender) → glTF에선 +Z. 작업선 원점은 수선 중앙에 있다.
 - 충돌: 시각 메시와 별개인 단순한 `*-colonly` 메시를 Godot이 정적 충돌체로 가져온다.
 - 빈 오브젝트(empty) 마커: `interact`(상호작용 지점), `loot_socket`, `light`, `sit`, `door_interact`.
-- LOD는 Godot 임포트가 자동 생성. 시각 메시는 6k 트라이 이하.
+- Godot 임포트 시 LOD가 자동 생성된다. 일반 소품은 시각 메시를 6천 삼각형 이하로 유지한다.
 - 오리지널 디자인만. 실존 브랜드·로고 금지.
