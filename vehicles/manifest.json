@@ -1,0 +1,28 @@
+{
+  "vehicles": [
+    {
+      "id": "calloway_compact",
+      "name": "Calloway Pip",
+      "class": "compact",
+      "asset": "vehicles/veh_calloway_compact.glb",
+      "wheelRadiusMeters": 0.31,
+      "wheelbaseMeters": 2.36
+    },
+    {
+      "id": "pier_runner",
+      "name": "Pier Runner",
+      "class": "sports",
+      "asset": "vehicles/veh_pier_runner.glb",
+      "wheelRadiusMeters": 0.33,
+      "wheelbaseMeters": 2.70
+    },
+    {
+      "id": "breakwater_utility",
+      "name": "Breakwater Utility",
+      "class": "truck",
+      "asset": "vehicles/veh_breakwater_utility.glb",
+      "wheelRadiusMeters": 0.40,
+      "wheelbaseMeters": 3.16
+    }
+  ]
+}

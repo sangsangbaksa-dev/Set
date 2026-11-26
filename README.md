@@ -1,6 +1,6 @@
 # Set — 공용 3D 모델
 
-Project Harbor(sangsangbaksa-dev/GTA-)와 이후 합칠 게임이 같이 쓰는 소품 **46종**, 차량 **1종**, 인물 **5종**. 소품은 전투 커버, 경제 상호작용, 항구 시설을 포함한다.
+Project Harbor(sangsangbaksa-dev/GTA-)와 이후 합칠 게임이 같이 쓰는 소품 **46종**, 차량 **3종**, 인물 **5종**. 소품은 전투 커버, 경제 상호작용, 항구 시설을 포함한다.
 
 ![cover](previews/cover.png)
 ![large](previews/large.png)
@@ -62,15 +62,19 @@ Project Harbor(sangsangbaksa-dev/GTA-)와 이후 합칠 게임이 같이 쓰는 
 
 | 파일 | 설명 |
 |---|---|
-| `vehicles/veh_calloway_compact.glb` | Calloway Pip 소형차. 차체와 네 바퀴 피벗을 포함한다. |
+| `vehicles/veh_calloway_compact.glb` | Calloway Pip 소형차 |
+| `vehicles/veh_pier_runner.glb` | Pier Runner 2인승 스포츠카 |
+| `vehicles/veh_breakwater_utility.glb` | Breakwater Utility 항만 작업 픽업트럭 |
 
 차량 원점은 지면 중심이고 glTF에서 전방은 +Z, 위쪽은 +Y다. `WheelFL`과 `WheelFR`은 로컬 Y축으로 조향하고 각 바퀴의 `Roll` 자식 노드는 로컬 X축으로 구른다.
 
-Harbor 리포에서 차량을 재생성한다.
+`vehicles/manifest.json`에서 각 모델과 바퀴 규격을 확인할 수 있다. Harbor 리포의 Blender 생성 스크립트에서 차량을 재생성한다. [차량 생성 소스](https://github.com/sangsangbaksa-dev/GTA-/blob/main/tools/blender/build_vehicles.py)
 
 ```bash
 blender -b --factory-startup -P tools/blender/build_vehicles.py -- --out ../set/vehicles
 ```
+
+Pier Runner와 Breakwater Utility만 내보낼 때는 `--skip-compact`를 추가한다.
 
 ## Harbor Front 인물
 
