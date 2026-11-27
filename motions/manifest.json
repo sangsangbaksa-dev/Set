@@ -1,0 +1,89 @@
+{
+  "character": "characters/chr_harbor_clerk.glb",
+  "library": "motions/harbor_mixamo_motions.glb",
+  "rig": "51-bone",
+  "fps": 30,
+  "motions": [
+    {
+      "id": "mixamo_idle",
+      "clip": "Idle",
+      "category": "stationary",
+      "description": "제자리 호흡 대기 루프",
+      "source": "Male Fitness Idle With Breathing",
+      "frames": 100,
+      "asset": "motions/mixamo_idle.glb"
+    },
+    {
+      "id": "mixamo_walk",
+      "clip": "Walk",
+      "category": "locomotion",
+      "description": "제자리 걷기 루프",
+      "source": "Male Standard Walk",
+      "frames": 38,
+      "asset": "motions/mixamo_walk.glb"
+    },
+    {
+      "id": "mixamo_jog",
+      "clip": "Jog",
+      "category": "locomotion",
+      "description": "제자리 조깅 루프",
+      "source": "Jogging",
+      "frames": 78,
+      "asset": "motions/mixamo_jog.glb"
+    },
+    {
+      "id": "mixamo_run",
+      "clip": "Run",
+      "category": "locomotion",
+      "description": "제자리 달리기 루프",
+      "source": "Standard Running",
+      "frames": 23,
+      "asset": "motions/mixamo_run.glb"
+    },
+    {
+      "id": "mixamo_turn_left",
+      "clip": "TurnLeft",
+      "category": "turn",
+      "description": "제자리 좌회전. 누적 요는 빼고 루프로 이어 붙임",
+      "source": "Standing Left Turn",
+      "frames": 29,
+      "asset": "motions/mixamo_turn_left.glb"
+    },
+    {
+      "id": "mixamo_turn_right",
+      "clip": "TurnRight",
+      "category": "turn",
+      "description": "제자리 우회전. 누적 요는 빼고 루프로 이어 붙임",
+      "source": "Standing Right Turn",
+      "frames": 29,
+      "asset": "motions/mixamo_turn_right.glb"
+    },
+    {
+      "id": "mixamo_dance",
+      "clip": "Dance",
+      "category": "dance",
+      "description": "브루클린 업록. 캡슐 안의 발놀림과 바닥 동작",
+      "source": "Brooklyn Uprock",
+      "frames": 147,
+      "asset": "motions/mixamo_dance.glb"
+    },
+    {
+      "id": "mixamo_crouch_idle",
+      "clip": "CrouchIdle",
+      "category": "stationary",
+      "description": "웅크린 대기 루프",
+      "source": "Low Crouching Idle",
+      "frames": 76,
+      "asset": "motions/mixamo_crouch_idle.glb"
+    },
+    {
+      "id": "mixamo_crouch_walk",
+      "clip": "CrouchWalk",
+      "category": "locomotion",
+      "description": "제자리 웅크린 걷기 루프",
+      "source": "Crouched Walk",
+      "frames": 32,
+      "asset": "motions/mixamo_crouch_walk.glb"
+    }
+  ]
+}
