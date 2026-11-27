@@ -1,6 +1,6 @@
 # Set — 공용 3D 모델
 
-Project Harbor(sangsangbaksa-dev/GTA-)와 이후 합칠 게임이 같이 쓰는 소품 **46종**, 차량 **1종**, 인물 **4종**. 소품은 전투 커버, 경제 상호작용, 항구 시설을 포함한다.
+Project Harbor(sangsangbaksa-dev/GTA-)와 이후 합칠 게임이 같이 쓰는 소품 **46종**, 차량 **1종**, 인물 **5종**, 주인공 모션 **9종**. 소품은 전투 커버, 경제 상호작용, 항구 시설을 포함한다.
 
 ![cover](previews/cover.png)
 ![large](previews/large.png)
@@ -78,6 +78,7 @@ blender -b --factory-startup -P tools/blender/build_vehicles.py -- --out ../set/
 
 | 모델 | 역할과 디자인 |
 |---|---|
+| `characters/chr_harbor_clerk.glb` | 토마스 레예스. 화물 서기이자 주인공. 스킨드 메시에 Mixamo 클립 9종이 들어 있다 |
 | `characters/chr_harbor_rook.glb` | 룩. 바랜 청록 작업 재킷과 캔버스 슬링을 멘 배달원 |
 | `characters/chr_harbor_officer.glb` | 마라 베일. 남색 근무복, 모자와 방파제 배지를 착용한 항만 경찰 |
 | `characters/chr_harbor_crew.glb` | 니코 보스. 넓은 체형, 짧은 머리와 턱수염, 적갈색 조끼를 입은 라이벌 크루 |
@@ -88,6 +89,26 @@ blender -b --factory-startup -P tools/blender/build_vehicles.py -- --out ../set/
 ```bash
 blender -b --factory-startup -P tools/blender/build_assets.py -- --out ../set --only harbor_people
 ```
+
+## 주인공 모션
+
+클립은 토마스 레예스(`characters/chr_harbor_clerk.glb`)에 붙어 재생한다. 같은 9종이 그 GLB의 NLA 트랙으로도 들어 있다. `motions/`의 파일은 메시 없이 공용 51본 아마추어만 담는다. `motions/harbor_mixamo_motions.glb`는 9종을 한 파일에 묶은 것이고, 나머지는 클립마다 하나다.
+
+30 FPS이고 발은 glTF `Y = 0`에 붙는다. 걷기·조깅·달리기·웅크린 걷기는 제자리 루프다. 좌우 회전은 누적 요를 빼 컨트롤러가 방향을 돌린다.
+
+| 파일 (`motions/<id>.glb`) | 클립 | 용도 |
+|---|---|---|
+| `mixamo_idle` | `Idle` | 제자리 호흡 대기 |
+| `mixamo_walk` | `Walk` | 제자리 걷기 |
+| `mixamo_jog` | `Jog` | 제자리 조깅 |
+| `mixamo_run` | `Run` | 제자리 달리기 |
+| `mixamo_turn_left` | `TurnLeft` | 제자리 좌회전 |
+| `mixamo_turn_right` | `TurnRight` | 제자리 우회전 |
+| `mixamo_dance` | `Dance` | 브루클린 업록 |
+| `mixamo_crouch_idle` | `CrouchIdle` | 웅크린 대기 |
+| `mixamo_crouch_walk` | `CrouchWalk` | 제자리 웅크린 걷기 |
+
+`motions/manifest.json`에서 클립 이름, 프레임 수, 경로를 확인할 수 있다. Harbor의 `tools/blender/mixamo_mocap.py`가 이 51본 리그로 리타겟한다.
 
 ## 규칙
 - 생성: GTA- 리포 `tools/blender/build_props.py` (블렌더 4.2 헤드리스). **.glb를 손으로 고치지 말고** 스크립트 수정 후 재생성:
